@@ -1,0 +1,58 @@
+data:
+  name: 'var_params'
+  datapath: 'Data/var_params/train_data'
+  save_dir: 'output/var_params/'
+
+test:
+  pre-trained: 'saved_models/var_params/00000-train_data64-cond-ddpmpp-edm-gpus2-batch64-fp32/network-snapshot-019631.pkl'
+  iterations: 2000
+  
+generate:
+  batch_size: 1
+  sigma_min: 0.002
+  sigma_max: 80
+  rho: 7
+
+
+guidance_map:
+  forward:
+    diffusion:
+      zeta_obs_p: 2000
+      zeta_obs_u: 2000
+      zeta_obs_v: 0
+    advection:
+      zeta_obs_p: 2000
+      zeta_obs_u: 2000
+      zeta_obs_v: 0
+    advection_diffusion:
+      zeta_obs_p: 1500
+      zeta_obs_u: 1500
+      zeta_obs_v: 0
+
+  inverseu:
+    diffusion:
+      zeta_obs_p: 2500
+      zeta_obs_u: 0
+      zeta_obs_v: 2500
+    advection:
+      zeta_obs_p: 1500
+      zeta_obs_u: 0
+      zeta_obs_v: 1500
+    advection_diffusion:
+      zeta_obs_p: 3000
+      zeta_obs_u: 0
+      zeta_obs_v: 3000
+
+  inversep:
+    diffusion:
+      zeta_obs_p: 0
+      zeta_obs_u: 25000
+      zeta_obs_v: 25000
+    advection:
+      zeta_obs_p: 0
+      zeta_obs_u: 20000
+      zeta_obs_v: 20000
+    advection_diffusion:
+      zeta_obs_p: 0
+      zeta_obs_u: 20000
+      zeta_obs_v: 20000

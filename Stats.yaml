@@ -1,0 +1,161 @@
+fixed_params:
+  u:
+    a: 2.0012 
+    b: -1.0
+  v:
+    a: 1.9598
+    b: -0.9731
+  
+var_params:
+  p:
+    diffusion:  
+      a: 6.666
+      b: -1.666
+    advection: 
+      a: 0.6666
+      b: -2.3333
+    advection_diffusion:  
+      a: 6.666
+      b: -1.666
+
+  u:
+    a: 2.0012
+    b: -1.0
+
+  v:
+    a: 1.9518
+    b: -0.9701
+
+
+hetro_params:
+  p:
+    diffusion:  
+        diffusivity:
+          a: 10.0
+          b: -3.0
+
+    advection: 
+        velocity_x:
+          a: 2.0
+          b: -5.0
+        velocity_y:
+          a: 2.0
+          b: -5.0
+
+    advection_diffusion:  
+        diffusivity:
+          a: 10.0
+          b: -3.0
+        velocity_x:
+          a: 2.0
+          b: -5.0
+        velocity_y:
+          a: 2.0
+          b: -5.0
+  init:
+    a: 2.0012
+    b: -1.0
+
+  last:
+    a: 1.9634
+    b: -0.9731
+
+
+
+hetro_params_physics:
+  p:
+    diffusion:  
+        diffusivity:
+          a: 10.0
+          b: -3.0
+
+    advection: 
+        velocity_x:
+          a: 2.0
+          b: -5.0
+        velocity_y:
+          a: 2.0
+          b: -4.0
+
+    advection_diffusion:  
+        diffusivity:
+          a: 10.0
+          b: -3.0
+        velocity_x:
+          a: 2.0
+          b: -5.0
+        velocity_y:
+          a: 2.0
+          b: -4.0
+  u:
+    a: 2.0012
+    b: -1.0
+
+  v:
+    a: 1.9668
+    b: -0.9755
+
+
+scalar_vector:
+  adve_diff:
+      p:
+        diffusion:  
+          a: 6.666
+          b: -1.666
+        advection: 
+          a: 0.6666
+          b: -2.3333
+        advection_diffusion:  
+          a: 6.666
+          b: -1.666
+
+      init:
+        a: 2.0012
+        b: -1.0
+
+      last:
+        a: 1.9528
+        b: -0.9698
+
+  burgers:
+    init:
+      a: 2.0012
+      b: -1.0
+
+    last:
+      a: 2.6531
+      b: -1.0
+
+  allen_cahn:
+    p:
+      'diffusivity':
+        a: 208.33
+        b: -1.5208
+
+    init:
+      a: 2.0012
+      b: -1.0
+
+    last:
+      a: 2.0
+      b: -1.0
+
+
+  Navier_Stokes:
+      init:
+        a: 0.666
+        b: 0.0
+
+      last_u:
+        a: 0.6528
+        b: 0.0
+
+      last_v:
+        a: 1.8124
+        b: -1.5543
+
+      # last_p:
+      #   a: 1.
+      #   b: -0.0323
+
+
